@@ -28,7 +28,6 @@ This plan outlines the steps to create a monorepo structure for the KnowledgeBas
 - [ ] 4.3. Set up TypeScript configuration
 - [ ] 4.4. Configure Vite build configuration
 - [ ] 4.5. Set up ESLint and Prettier configuration
-- [ ] 4.6. Create Dockerfile for frontend deployment
 
 ### 5. API Service Setup
 - [ ] 5.1. Create `packages/apps/api` package structure
@@ -37,7 +36,6 @@ This plan outlines the steps to create a monorepo structure for the KnowledgeBas
 - [ ] 5.4. Configure Fastify server setup
 - [ ] 5.5. Set up OpenAPI/Zod validation
 - [ ] 5.6. Configure ESLint and Prettier
-- [ ] 5.7. Create Dockerfile for API deployment
 
 ### 6. Crawler Service Setup
 - [ ] 6.1. Create `packages/apps/crawler` package structure
@@ -46,7 +44,6 @@ This plan outlines the steps to create a monorepo structure for the KnowledgeBas
 - [ ] 6.4. Configure job queue and processing logic
 - [ ] 6.5. Set up data source abstractions
 - [ ] 6.6. Configure ESLint and Prettier
-- [ ] 6.7. Create Dockerfile for crawler deployment
 
 ### 7. Testing Infrastructure
 - [ ] 7.1. Create `packages/integration-tests` package
@@ -60,12 +57,6 @@ This plan outlines the steps to create a monorepo structure for the KnowledgeBas
 - [ ] 8.2. Set up development scripts for concurrent package development
 - [ ] 8.3. Configure linting and formatting scripts
 - [ ] 8.4. Set up pre-commit hooks for code quality
-
-### 9. Containerization
-- [ ] 9.1. Create individual Dockerfiles for each deployable service
-- [ ] 9.2. Optimize Docker builds for monorepo structure
-- [ ] 9.3. Configure multi-stage builds for production optimization
-- [ ] 9.4. Create .dockerignore files for each service
 
 ### 10. CI/CD Pipeline Configuration
 - [ ] 10.1. Update GitLab CI/CD configuration for monorepo
@@ -101,8 +92,7 @@ This plan outlines the steps to create a monorepo structure for the KnowledgeBas
 - [ ] 15.1. Verify all packages build successfully
 - [ ] 15.2. Test cross-package dependencies
 - [ ] 15.3. Run integration tests across all services
-- [ ] 15.4. Validate Docker builds for all services
-- [ ] 15.5. Test CI/CD pipeline with the new structure
+- [ ] 15.4. Test CI/CD pipeline with the new structure
 
 ## Success Criteria
 - All services can be built and deployed independently
@@ -110,14 +100,12 @@ This plan outlines the steps to create a monorepo structure for the KnowledgeBas
 - Testing infrastructure covers both unit and integration testing
 - CI/CD pipeline works efficiently with change detection
 - Development experience is streamlined with pnpm workspaces
-- Docker containers are optimized for production deployment
 
 ## Technologies Used
 - **Package Manager**: pnpm workspaces
 - **Frontend**: React.js, TypeScript, Vite
 - **Backend**: Node.js, Fastify, TypeScript
 - **Testing**: Jest/Vitest for unit and integration tests
-- **Containerization**: Docker with individual Dockerfiles
 - **CI/CD**: GitLab CI/CD with independent service pipelines
 - **Monitoring**: OpenTelemetry
 
