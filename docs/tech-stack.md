@@ -3,6 +3,7 @@
 ## Frontend
 - TypeScript
 - React.js
+- MUI component library
 - Zustand
 - Vite
 

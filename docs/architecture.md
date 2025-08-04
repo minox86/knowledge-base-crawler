@@ -21,15 +21,6 @@ The monorepo includes shared packages for:
 - **Unit tests**: Each package contains its own unit tests
 - **Integration tests**: Dedicated separate package for cross-service integration testing
 
-## Containerization
-
-The crawler is containerized using Docker and can be deployed in different environments.
-
-### Docker Strategy
-- **Individual Dockerfiles**: Each service has its own Dockerfile for independent deployment
-- **No Docker Compose**: Development environment doesn't use Docker Compose
-- **Independent Deployment**: Each component can be built and deployed separately
-
 ## Components
 
 ### Front-end
