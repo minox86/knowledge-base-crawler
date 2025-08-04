@@ -17,22 +17,8 @@ export declare const DataSourceStatusSchema: z.ZodEnum<{
     error: "error";
     syncing: "syncing";
 }>;
-export declare const CrawlFrequencySchema: z.ZodEnum<{
-    hourly: "hourly";
-    daily: "daily";
-    weekly: "weekly";
-    monthly: "monthly";
-    custom: "custom";
-}>;
 export declare const CrawlScheduleSchema: z.ZodObject<{
     enabled: z.ZodBoolean;
-    frequency: z.ZodEnum<{
-        hourly: "hourly";
-        daily: "daily";
-        weekly: "weekly";
-        monthly: "monthly";
-        custom: "custom";
-    }>;
     cronExpression: z.ZodOptional<z.ZodString>;
 }, z.core.$strip>;
 export declare const DataSourceConfigSchema: z.ZodObject<{
@@ -41,13 +27,6 @@ export declare const DataSourceConfigSchema: z.ZodObject<{
     filters: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
     schedule: z.ZodOptional<z.ZodObject<{
         enabled: z.ZodBoolean;
-        frequency: z.ZodEnum<{
-            hourly: "hourly";
-            daily: "daily";
-            weekly: "weekly";
-            monthly: "monthly";
-            custom: "custom";
-        }>;
         cronExpression: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>>;
 }, z.core.$strip>;
@@ -72,13 +51,6 @@ export declare const DataSourceSchema: z.ZodObject<{
         filters: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
         schedule: z.ZodOptional<z.ZodObject<{
             enabled: z.ZodBoolean;
-            frequency: z.ZodEnum<{
-                hourly: "hourly";
-                daily: "daily";
-                weekly: "weekly";
-                monthly: "monthly";
-                custom: "custom";
-            }>;
             cronExpression: z.ZodOptional<z.ZodString>;
         }, z.core.$strip>>;
     }, z.core.$strip>;
@@ -93,7 +65,6 @@ export declare const DataSourceSchema: z.ZodObject<{
 }, z.core.$strip>;
 export type DataSourceType = z.infer<typeof DataSourceTypeSchema>;
 export type DataSourceStatus = z.infer<typeof DataSourceStatusSchema>;
-export type CrawlFrequency = z.infer<typeof CrawlFrequencySchema>;
 export type CrawlSchedule = z.infer<typeof CrawlScheduleSchema>;
 export type DataSourceConfig = z.infer<typeof DataSourceConfigSchema>;
 export type DataSource = z.infer<typeof DataSourceSchema>;

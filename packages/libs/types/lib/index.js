@@ -18,16 +18,8 @@ export const DataSourceStatusSchema = z.enum([
     'error',
     'syncing'
 ]);
-export const CrawlFrequencySchema = z.enum([
-    'hourly',
-    'daily',
-    'weekly',
-    'monthly',
-    'custom'
-]);
 export const CrawlScheduleSchema = z.object({
     enabled: z.boolean(),
-    frequency: CrawlFrequencySchema,
     cronExpression: z.string().optional(),
 });
 export const DataSourceConfigSchema = z.object({
