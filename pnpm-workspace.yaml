@@ -1,0 +1,9 @@
+packages:
+  # Applications - deployable services
+  - 'packages/apps/*'
+  
+  # Shared libraries - reusable packages
+  - 'packages/libs/*'
+  
+  # Additional packages (e.g., integration tests)
+  - 'packages/integration-tests/*'
