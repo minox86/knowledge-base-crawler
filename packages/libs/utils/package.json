@@ -1,0 +1,37 @@
+{
+  "name": "@knowledge-crawler/utils",
+  "version": "1.0.0",
+  "description": "Shared utility functions for Knowledge Base Crawler",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf lib tsconfig.tsbuildinfo",
+    "dev": "tsc --build --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": ["typescript", "utilities", "knowledge-crawler"],
+  "license": "MIT",
+  "dependencies": {
+    "@knowledge-crawler/types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

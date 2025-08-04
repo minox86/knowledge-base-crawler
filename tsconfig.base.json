@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@knowledge-crawler/types": [
+        "./packages/libs/types/src"
+      ],
+      "@knowledge-crawler/types/*": [
+        "./packages/libs/types/src/*"
+      ],
+      "@knowledge-crawler/utils": [
+        "./packages/libs/utils/src"
+      ],
+      "@knowledge-crawler/utils/*": [
+        "./packages/libs/utils/src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/lib",
+    "**/dist",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
+}

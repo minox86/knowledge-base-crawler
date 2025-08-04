@@ -1,0 +1,36 @@
+{
+  "name": "@knowledge-crawler/types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript type definitions for Knowledge Base Crawler",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf lib tsconfig.tsbuildinfo",
+    "dev": "tsc --build --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "knowledge-crawler"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^4.0.14"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
