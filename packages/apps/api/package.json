@@ -1,0 +1,43 @@
+{
+  "name": "@knowledge-crawler/api",
+  "version": "1.0.0",
+  "description": "Knowledge Base Crawler API Service",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "api",
+    "fastify",
+    "typescript",
+    "knowledge-base",
+    "crawler"
+  ],
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^2.1.0",
+    "@fastify/type-provider-typebox": "^3.5.0",
+    "@knowledge-crawler/types": "workspace:*",
+    "@knowledge-crawler/utils": "workspace:*",
+    "fastify": "^4.25.2",
+    "fastify-type-provider-zod": "2.0.0",
+    "fastify-zod": "^1.4.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -39,8 +39,10 @@ export const DataSourceSchema = z.object({
   type: DataSourceTypeSchema,
   config: DataSourceConfigSchema,
   status: DataSourceStatusSchema,
-  createdAt: z.date(),
-  updatedAt: z.date(),
+  lastCrawl: z.string().datetime().optional(),
+  documentsCount: z.number().int().min(0),
+  createdAt: z.string().datetime(),
+  updatedAt: z.string().datetime(),
 });
 
 // Export the inferred TypeScript types
@@ -49,3 +51,6 @@ export type DataSourceStatus = z.infer<typeof DataSourceStatusSchema>;
 export type CrawlSchedule = z.infer<typeof CrawlScheduleSchema>;
 export type DataSourceConfig = z.infer<typeof DataSourceConfigSchema>;
 export type DataSource = z.infer<typeof DataSourceSchema>;
+
+// Alias for backward compatibility
+export type CrawlStatus = DataSourceStatus;
